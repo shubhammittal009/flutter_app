@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
       theme: appTheme,
       home: Scaffold(
         body: Container(
-        // child: TopBar(),
-        child: App(),
+        child: TopBar(),
+        // child: App(),
         ),
       ),
     );
