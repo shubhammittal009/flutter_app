@@ -32,9 +32,40 @@ class AppState extends State<App> {
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
-        DragBox(Offset(70.0, 200.0), 'Body', Colors.blueAccent),
-        DragBox2(Offset(280.0, 280.0), 'Wheel_1', Colors.orange),
-        DragBox2(Offset(120.0, 280.0), 'Wheel_2', Colors.lightGreen),
+        //
+        // T 1  
+        // 
+        DragBox2(Offset(30.0, 10.0), 'R_ID 1', Colors.orange),
+        DragBox2(Offset(30.0, 90.0), 'R_ID 2', Colors.lightGreen),
+        DragBox2(Offset(30.0, 170.0), 'R_ID 3', Colors.orange),
+        DragBox2(Offset(30.0, 250.0), 'R_ID 4', Colors.lightGreen),
+        DragBox2(Offset(30.0, 330.0), 'R_ID 5', Colors.orange),
+        DragBox2(Offset(30.0, 410.0), 'R_ID 6', Colors.lightGreen),
+        DragBox2(Offset(30.0, 490.0), 'R_ID 7', Colors.orange),
+        DragBox2(Offset(30.0, 570.0), 'R_ID 8', Colors.red),
+        //
+        // T 2  
+        // 
+        DragBox2(Offset(130.0, 10.0), 'W_ID 1', Colors.orange),
+        DragBox2(Offset(130.0, 90.0), 'W_ID 2', Colors.lightGreen),
+        DragBox2(Offset(130.0, 170.0), 'W_ID 3', Colors.orange),
+        DragBox2(Offset(130.0, 250.0), 'W_ID 4', Colors.lightGreen),
+        DragBox2(Offset(130.0, 330.0), 'W_ID 5', Colors.orange),
+        DragBox2(Offset(130.0, 410.0), 'W_ID 6', Colors.lightGreen),
+        DragBox2(Offset(130.0, 490.0), 'W_ID 7', Colors.orange),
+        DragBox2(Offset(130.0, 570.0), 'W_ID 8', Colors.red),
+        //
+        // T 3  
+        // 
+        DragBox2(Offset(230.0, 10.0), 'W_ID 1', Colors.orange),
+        DragBox2(Offset(230.0, 90.0), 'W_ID 2', Colors.lightGreen),
+        DragBox2(Offset(230.0, 170.0), 'W_ID 3', Colors.orange),
+        DragBox2(Offset(230.0, 250.0), 'W_ID 4', Colors.lightGreen),
+        DragBox2(Offset(230.0, 330.0), 'W_ID 5', Colors.orange),
+        DragBox2(Offset(230.0, 410.0), 'W_ID 6', Colors.lightGreen),
+        DragBox2(Offset(230.0, 490.0), 'W_ID 7', Colors.orange),
+        DragBox2(Offset(230.0, 570.0), 'W_ID 8', Colors.red),
+        // 
         Positioned(
           left: 100.0,
           bottom: 0.0,
@@ -48,13 +79,13 @@ class AppState extends State<App> {
               List<dynamic> rejected,
             ) {
               return Container(
-                width: 200.0,
-                height: 200.0,
+                width: 100.0,
+                height: 100.0,
                 decoration: BoxDecoration(
                   color: accepted.isEmpty ? caughtColor : Colors.grey.shade200,
                 ),
                 child: Center(
-                  child: Text("Defect area"),
+                  child: Text("Buffer area"),
                 ),
               );
             },
@@ -93,7 +124,7 @@ class DragBoxState extends State<DragBox> {
         child: Draggable(
           data: widget.itemColor,
           child: Container(
-            width: 300.0,
+            width: 120.0,
             height: 100.0,
             color: widget.itemColor,
             child: Center(
@@ -113,8 +144,8 @@ class DragBoxState extends State<DragBox> {
             });
           },
           feedback: Container(
-            width: 120.0,
-            height: 120.0,
+            width: 70.0,
+            height: 70.0,
             color: widget.itemColor.withOpacity(0.5),
             child: Center(
               child: Text(
